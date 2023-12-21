@@ -1,4 +1,4 @@
-package com.example.myapplication;
+package com.example.myapplication.lcb;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -13,6 +13,8 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
+
+import com.example.myapplication.R;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -48,7 +50,7 @@ public class MainActivity2 extends AppCompatActivity {
 
     }
     private void populateLeaveTypes() {
-        String[] leaveTypes = {"Nghỉ làm", "Xin thôi việc"};
+        String[] leaveTypes = {"Nghỉ học", "Xin đi muộn"};
 
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, leaveTypes);
         spinnerLeaveType.setAdapter(adapter);

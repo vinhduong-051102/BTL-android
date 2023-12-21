@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:padding="16dp"
     android:background="@drawable/background"
-    tools:context=".MainActivity">
+    tools:context=".lcb.MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"

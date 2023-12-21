@@ -1,73 +1,32 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<!-- activity_main.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@drawable/border_background"
-    android:orientation="horizontal"
-    android:padding="16dp"
-    tools:context=".MainActivity3">
+    android:layout_height="match_parent">
 
-    <!-- Left Side - Subject and Regular Score -->
-    <LinearLayout
-        android:layout_width="0dp"
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Điểm học phần"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:orientation="vertical">
+        android:layout_below="@id/toolbar"
+        android:layout_marginTop="50dp" />
 
-        <!-- Subject Name -->
-        <TextView
-            android:id="@+id/tvSubjectName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Tên Môn" />
-
-        <!-- Regular Score -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Điểm thường xuyên" />
-
-            <!-- 5 Hyphens -->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="-----" />
-        </LinearLayout>
-    </LinearLayout>
-
-
-    <!-- Right Side - Detail, Midterm Score, and Hyphen -->
-    <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:orientation="vertical">
-
-        <!-- Detail Text -->
-        <TextView
-            android:id="@+id/tvDetail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Chi tiết" />
-
-        <!-- Midterm Score -->
-        <TextView
-            android:id="@+id/tvMidtermScore"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Điểm giữa kì" />
-
-        <!-- Hyphen -->
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="-" />
-
-    </LinearLayout>
-</LinearLayout>
+</RelativeLayout>

@@ -7,66 +7,97 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp"
-    tools:context=".MainActivity2">
+    android:orientation="vertical">
 
-    <!-- Leave Type Spinner -->
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tilLeaveType"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+    <!-- App Bar Layout -->
+    <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp">
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
-        <Spinner
-            android:id="@+id/spinnerLeaveType"
+        <!-- Toolbar -->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Chọn loại phiếu" />
-    </com.google.android.material.textfield.TextInputLayout>
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
 
-    <!-- Date Picker -->
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tilLeaveDate"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            <!-- Back Arrow -->
+
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- Main Content -->
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="2dp">
+        android:layout_height="match_parent"
+        android:background="@drawable/background"
+        android:orientation="vertical"
+        android:padding="16dp"
+        tools:context=".lcb.MainActivity2">
 
-        <EditText
-            android:id="@+id/etLeaveDate"
+        <!-- Leave Type Spinner -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilLeaveType"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Chọn ngày nghỉ"
-            android:inputType="none"
-            android:focusable="false"
-            android:clickable="true"
-            android:focusableInTouchMode="false" />
-    </com.google.android.material.textfield.TextInputLayout>
+            android:layout_marginTop="20dp">
 
-    <!-- Reason for Leave -->
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tilLeaveReason"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp">
+            <Spinner
+                android:id="@+id/spinnerLeaveType"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/background_input_square"
+                android:hint="Chọn loại phiếu" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etLeaveReason"
+        <!-- Date Picker -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilLeaveDate"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Lý do nghỉ"
-            android:inputType="textMultiLine"
-            android:minLines="3" />
-    </com.google.android.material.textfield.TextInputLayout>
+            android:layout_marginTop="10dp">
 
-    <!-- Submit Button -->
-    <Button
-        android:id="@+id/btnSubmit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="Gửi" />
+            <EditText
+                android:id="@+id/etLeaveDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Chọn ngày nghỉ"
+                android:inputType="none"
+                android:focusable="false"
+                android:clickable="true"
+                android:focusableInTouchMode="false"
+                android:background="@drawable/background_input_square" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Reason for Leave -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilLeaveReason"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etLeaveReason"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Lý do nghỉ"
+                android:inputType="textMultiLine"
+                android:minLines="3"
+                android:background="@drawable/background_input_square" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Submit Button -->
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Gửi" />
+    </LinearLayout>
 </LinearLayout>
