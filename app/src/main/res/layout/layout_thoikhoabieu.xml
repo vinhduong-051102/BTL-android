@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_vertical"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    <com.sahana.horizontalcalendar.HorizontalCalendar
+        android:id="@+id/horizontalCalendar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:numOfDays="90"
+        app:setBgColor="#edf2f8"
+        app:setSelectedBgColor="#1F85E3"
+        app:setTextColor="#6b6d6c"
+        app:setSelectedTextColor="@color/white"
+        app:setDateTextSize="@dimen/twenty_two_sp"
+        app:setWeekTextSize="13sp"
+        app:setMonthTextSize="17sp"
+        app:setDateFontStyle="@string/light"
+        app:setLabelFontStyle="@string/bold"
+        app:setMonthFontStyle="@string/bold"
+        app:setLabel="Thời khóa biểu" />
+
+    <TextView
+        android:id="@+id/dateTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center" />
+    <ListView
+        android:id="@+id/lv_thoi_khoa_bieu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </ListView>
+</LinearLayout>
