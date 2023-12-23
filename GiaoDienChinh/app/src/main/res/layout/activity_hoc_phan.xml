@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Hoc_Phan">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Xem học phần"
+            android:textStyle="bold"
+            android:textSize="64px"
+            android:layout_margin="50px"
+            >
+
+        </TextView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:layout_marginTop="100px"
+
+            >
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:id="@+id/dkhocphan"
+                    android:layout_weight="1"
+                    android:padding="40px"
+                    android:background="#D6F3FF"
+                    android:layout_width="200px"
+                    android:layout_height="200px"
+                    android:layout_gravity="center"
+                    >
+                    <ImageView
+                        android:id="@+id/myImageView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/apps_add"
+                        android:scaleType="centerCrop">
+                    </ImageView>
+                </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10px"
+                    android:text="Đăng ký học phần"
+                    android:layout_gravity="center"
+                    >
+
+                </TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_gravity="center">
+                <LinearLayout
+                    android:id="@+id/danhsachhocphan"
+
+                    android:padding="40px"
+                    android:textSize="40px"
+                    android:background="#D6F3FF"
+                    android:layout_width="200px"
+                    android:layout_height="200px"
+                    android:layout_gravity="center"
+                    >
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/apps"
+                        android:scaleType="centerCrop">
+                    </ImageView>
+                </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Danh sách học phần"
+                    android:layout_marginTop="10px"
+                    android:layout_gravity="center"
+                    >
+
+                </TextView>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
