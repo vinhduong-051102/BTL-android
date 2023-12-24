@@ -1,22 +1,23 @@
 package com.example.myapplication;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Schedule {
     String buoi;
-    String tiet;
+    List<Integer> tiet;
     String monHoc;
     String giaoVien;
     String diaDiem;
     public String getBuoi(){return buoi;}
     public String getMonHoc(){return monHoc;}
-    public String getTiet(){return tiet;}
+    public List<Integer> getTiet(){return tiet;}
     public String getGiaoVien(){return giaoVien;}
     public String getDiaDiem(){return diaDiem;}
     public void setBuoi(String buoi) {
         this.buoi = buoi;
     }
-    public void setTiet(String tiet) {
+    public void setTiet(List<Integer> tiet) {
         this.tiet = tiet;
     }
     public void setGiaoVien(String giaoVien) {
@@ -31,7 +32,9 @@ public class Schedule {
 
     @Override
     public String toString() {
-        return "Buổi "+buoi+"-"+tiet+"\n"+monHoc+"\n"+giaoVien+"\n"+diaDiem;
+        return "Buổi "+buoi+"-"+tiet.stream()
+                .map(Object::toString)
+                .collect(Collectors.joining(", "))+"\n"+monHoc+"\n"+giaoVien+"\n"+diaDiem;
     }
 
 }
