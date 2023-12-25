@@ -4,6 +4,7 @@ import android.app.AlertDialog;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import com.sahana.horizontalcalendar.HorizontalCalendar;
@@ -23,6 +24,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.layout_thoikhoabieu);
         HorizontalCalendar mHorizontalCalendar = findViewById(R.id.horizontalCalendar);
         mDateTextView = findViewById(R.id.dateTextView);
+        ProgressBar khongdiemdanh=(ProgressBar) findViewById(R.id.khongDiemDanh); // initiate the progress bar
+        khongdiemdanh.setMax(100);
+        khongdiemdanh.setProgress(50);
         mHorizontalCalendar.setOnDateSelectListener(dateModel -> {
             mDateTextView.setText(dateModel != null ?
                     dateModel.day + " " + dateModel.dayOfWeek + " " + dateModel.month + "," + dateModel.year : "");
